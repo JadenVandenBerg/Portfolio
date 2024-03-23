@@ -3,11 +3,19 @@ body, h1, h2, h3, p {
     padding: 0;
 }
 
+@font-face {
+    font-family: "jayvanFont";
+    src: url("jayvanFont.otf");
+}
 
 body {
-    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif !important;
     line-height: 1.6;
-    background: url("bg.png");
+    background: linear-gradient(black, green, black) center center;
+    background-size: cover;
 }
 
 header, footer {
@@ -81,6 +89,7 @@ aside h4 {
 
 footer {
     margin-top: 20px;
+    height: -webkit-fill-available;
 }
 
 article {
@@ -96,4 +105,96 @@ article {
     main {
         margin-right: 0;
     }
+}
+
+#contactParent {
+    background: #f4f4f4;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+#contactParent h2 {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 900;
+    color: #0d8997;
+}
+
+#contact div {
+    padding: 10px;
+    margin: 10px;
+}
+
+#contact img {
+    height: 15px;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    background: transparent;
+}
+
+.project {
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #ffffff54;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 10px;
+    height: -webkit-fill-available;
+}
+
+.subProj {    
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.project h3 {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.project h6 {
+    margin: 0;
+    font-size: 1.7vh;
+    border-bottom: 1px solid black;
+}
+
+.project img {
+    grid-column: 1 / 3;
+    width: 100%;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.project p {
+    margin: 0;
+    color: black;
+    text-align: center;
+    font-size: 1.6vh;
+    border-bottom: 1px solid black;
+}
+
+.project p:last-of-type, .project h6:last-of-type {
+    border-bottom: 0px;
+}
+
+#projectsParent h2 {
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+#projectsParent {
+    background: transparent;
 }
